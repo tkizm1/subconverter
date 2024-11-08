@@ -16,17 +16,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - arch: x86
-            artifact: subconverter_linux32
-            os: ubuntu-latest
           - arch: amd64
             artifact: subconverter_linux64
-            os: ubuntu-latest
-          - arch: armv7
-            artifact: subconverter_armv7
-            os: ubuntu-latest
-          - arch: aarch64
-            artifact: subconverter_aarch64
             os: ubuntu-latest
     runs-on: ${{ matrix.os }}
     name: Linux ${{ matrix.arch }} Build
