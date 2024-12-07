@@ -47,7 +47,7 @@ rm subconverter
 # shellcheck disable=SC2046
 g++ -o base/subconverter $(find CMakeFiles/subconverter.dir/src/ -name "*.o")  -static -lpcre2-8 -lyaml-cpp -L/usr/lib64 -lcurl -lmbedtls -lmbedcrypto -lmbedx509 -lz -l:quickjs/libquickjs.a -llibcron -O3 -s
 
-python3 -m ensurepip --break-system-packages
+# python3 -m ensurepip --break-system-packages
 python3 -m pip install gitpython --break-system-packages
 python3 scripts/update_rules.py -c scripts/rules_config.conf
 
