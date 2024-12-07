@@ -4,7 +4,7 @@ set -xe
 apk add gcc g++ build-base linux-headers cmake make autoconf automake libtool python3
 apk add mbedtls2-dev mbedtls2-static zlib-dev rapidjson-dev zlib-static pcre2-dev
 
-git clone https://github.com/curl/curl --depth=1 --branch curl-8_6_0
+git clone https://github.com/curl/curl --depth=1
 cd curl
 cmake -DCURL_USE_MBEDTLS=ON -DHTTP_ONLY=ON -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=OFF -DCMAKE_USE_LIBSSH2=OFF -DBUILD_CURL_EXE=OFF . > /dev/null
 make install -j2 > /dev/null
